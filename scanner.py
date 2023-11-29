@@ -30,7 +30,6 @@ char_groups = [[";", ":", ",", "[", "]", "(", ")", "{", "}", "+", "-", "<"], ["*
                ["\n", "\r", "\t", "\v", "\f", " "], ["$"], list(string.ascii_letters),
                ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], ["all"]]
 
-
 def make_transition(chars_id: list[int], goal_states: list[int], state: State):
     if len(chars_id) != len(goal_states):
         print("basi wrong")
@@ -38,7 +37,6 @@ def make_transition(chars_id: list[int], goal_states: list[int], state: State):
     for i in range(len(chars_id)):
         for char in char_groups[chars_id[i]]:
             state.add_transition(char, goal_states[i])
-
 
 class Scanner:
 
