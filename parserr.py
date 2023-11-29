@@ -1,5 +1,5 @@
-# Hasti Karimi 99105656
-# Negar Babashah 99109325
+# Hasti Karimi
+# Negar Babashah
 
 # 1. initialize
 # 2. get first non_terminal
@@ -7,7 +7,6 @@
 # 4. for current non-terminal, choose which rule to use based on the token
 # 5. apply the rule (and update current non_terminal)
 # 6. in cases of error, panic mode
-
 
 import json
 
@@ -32,7 +31,6 @@ parse_tree_middle = '├'
 
 eof_reached = False
 
-
 def remove_duplicates(my_list):
     return list(dict.fromkeys(my_list))
 
@@ -40,12 +38,10 @@ def remove_duplicates(my_list):
 def is_terminal(name: str) -> bool:
     return not is_action_symbol(name) and name not in non_terminals
 
-
 def is_action_symbol(name: str) -> bool:
     if type(name) != str:
         return False
     return name.startswith('#')
-
 
 def get_token_name(token) -> str:
     token_name = token[0]
@@ -53,11 +49,9 @@ def get_token_name(token) -> str:
         token_name = token[1]
     return token_name
 
-
 def get_action_symbol_input(token) -> str:
     token_name = token[1]
     return token_name
-
 
 class Parser:
     def __init__(self, errors_file, parse_tree_file, scanner, code_gen) -> None:
