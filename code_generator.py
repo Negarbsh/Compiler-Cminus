@@ -57,7 +57,6 @@ invocation_address_key = "invocation_address"
 return_address_key = "return_address"
 return_value_key = "return_value"
 
-
 class SemanticAnalyzer:
     def __init__(self):
         self.num_semantic_errors = 0
