@@ -1,6 +1,5 @@
 import string
 
-
 class State:
 
     def __init__(self, id: int, terminality_status: int, type_id: int = 0, error_string: str = "Invalid input"):
@@ -26,7 +25,6 @@ class State:
 
     def get_error(self, character: str = "") -> str:
         return self.error_str
-
 
 # symbols = [";", ":", ",", "[", "]", "(", ")", "{", "}", "+", "-", "<"]  # 0
 # star = ["*"]  # 1
