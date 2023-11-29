@@ -63,9 +63,10 @@ parser = Parser(errors_file=parser_errors_file, parse_tree_file=parser_tree_file
 # Running the parser.
 parser.run()
 
-
+# Writing generated code and semantic errors to respective files.
 code_generator.write_pb_to_file(generated_code_file, semantic_errors_file)
 
+# Closing all opened files.
 in_file.close()
 out_file.close()
 lex_file.close()
