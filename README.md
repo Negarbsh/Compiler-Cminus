@@ -48,4 +48,5 @@ The `Code` folder contains several components of the CMinusCompiler:
 
 ## Maintainers
 
-
+- [Negar Babashah](https://github.com/Negarbsh)
+- [Hasti Karimi](https://github.com/HastiKarimi)
