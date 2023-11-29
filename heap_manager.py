@@ -1,8 +1,13 @@
 class HeapManager:
 
     def __init__(self):
+
+        # Initialize the address for the first free memory location in the heap.
         self.first_free = 500
+
+        # Dictionary to store variables with their memory addresses as keys.
         self.variables = {}
+        
         # heap manager is called twice for arrays. firstly with the declare_id and secondly
         # with modify attributes. after the second call with have to modify array type for address of array.
         # last_assigned is used for this.
