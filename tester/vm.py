@@ -4,14 +4,12 @@ import re
 COMMAND_PATTERN = re.compile(
     r'\d+\s+\(\s*(?P<command>[A-Z]+)(?P<params>(\s*,\s*[#@]?[-+]?\d*)+)\s*\)')
 
-
 class Context:
     def __init__(self, output_file, error_file):
         self.memory = dict()
         self.pc = 0
         self.output_file = output_file
         self.error_file = error_file
-
 
 def run(instructions: list[str], output_file, error_file):
     context = Context(output_file, error_file)
@@ -26,7 +24,6 @@ def run(instructions: list[str], output_file, error_file):
             # print(context.memory, file=sys.stderr)
             print(context.memory)
             raise
-
 
 def __execute(instruction: str, context: Context):
     print('--->  PC =', context.pc,
@@ -130,7 +127,6 @@ def __execute(instruction: str, context: Context):
 
     else:
         raise Exception('Invalid Command', command)
-
 
 if __name__ == "__main__":
     out_f = open("out.txt", "w+")
