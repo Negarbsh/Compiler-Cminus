@@ -5,16 +5,13 @@ from heap_manager import HeapManager
 from code_generator import CodeGenerator
 
 # initialize a scanner and call get_next_token repeatedly
-
 list_needed_files = ["output", "input", "semantic_errors"]
-
 
 def create_file_by_mode(name, mode, encoding='utf-8'):
     name_pure = name.split(".")[0]
     if name_pure in list_needed_files:
         return open(name, mode, encoding=encoding)
     return DummyFile()
-
 
 class DummyFile:
     def __init__(self):
@@ -26,7 +23,6 @@ class DummyFile:
     def close(self):
         pass
 
-
 in_file = create_file_by_mode("input.txt", "r")
 out_file = create_file_by_mode("tokens.txt", "w+")
 lex_file = create_file_by_mode("lexical_errors.txt", "w+")
@@ -35,14 +31,6 @@ parser_errors_file = create_file_by_mode("syntax_errors.txt", "w+")
 parser_tree_file = create_file_by_mode("parse_tree.txt", "w+", encoding='utf-8')
 generated_code_file = create_file_by_mode("output.txt", "w+")
 semantic_errors_file = create_file_by_mode("semantic_errors.txt", "w+")
-
-# in_file = open("input.txt", "r")
-# out_file = open("tokens.txt", "w+")
-# lex_file = open("lexical_errors.txt", "w+")
-# sym_file = open("symbol_table.txt", "w+")
-# parser_errors_file = open("syntax_errors.txt", "w+")
-# parser_tree_file = open("parse_tree.txt", "w+", encoding='utf-8')
-# generated_code_file = open("output.txt", "w+")
 
 heap = HeapManager()
 symbol_table = SymbolTable(heap)
