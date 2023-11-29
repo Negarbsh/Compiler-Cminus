@@ -64,5 +64,13 @@ class HeapManager:
 
 class TempVariable:
     def __init__(self, type_name, address, array_attribute):
+        """
+        Initialize a temporary variable.
+
+        :param type_name: The data type of the variable.
+        :param address: The memory address of the variable.
+        :param array_attribute: Boolean indicating if the variable is an array.
+        """
         self.type_name = type_name
         self.address = address
+        # Note: array_attribute is currently not stored but can be used for future enhancements.
