@@ -24,9 +24,9 @@ class HeapManager:
         :param array_attribute: Boolean indicating if the variable is an array.
         :return: Address of the first free cell allocated for this variable.
         """
-        
-        # return address of the first free cell
+        # Store the starting address of the allocated memory.
         temp_address = self.first_free
+
         if array_attribute:
             self.last_temp.type_name += "-arr"
 
