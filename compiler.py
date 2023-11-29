@@ -40,9 +40,11 @@ generated_code_file = create_file_by_mode("output.txt", "w+")
 semantic_errors_file = create_file_by_mode("semantic_errors.txt", "w+")
 
 
+# Initializing the heap manager and symbol table.
 heap = HeapManager()
 symbol_table = SymbolTable(heap)
 
+# Initializing the scanner with various input and output files.
 scanner = Scanner(
     input_file=in_file,
     output_file=out_file,
