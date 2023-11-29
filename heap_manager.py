@@ -54,6 +54,12 @@ class HeapManager:
             return 1  # Void takes 1 unit of memory.
 
     def get_type_by_address(self, address):
+        """
+        Retrieve the data type of the variable stored at a specific memory address.
+
+        :param address: The memory address of the variable.
+        :return: The data type of the variable.
+        """
         return self.variables[address].type_name
 
 class TempVariable:
