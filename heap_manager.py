@@ -16,6 +16,15 @@ class HeapManager:
         self.last_temp = None
 
     def get_temp(self, type_name, size=1, array_attribute=False):
+        """
+        Allocate memory for a temporary variable and return its address.
+
+        :param type_name: The data type of the variable (e.g., 'int').
+        :param size: The number of memory units to allocate (default is 1).
+        :param array_attribute: Boolean indicating if the variable is an array.
+        :return: Address of the first free cell allocated for this variable.
+        """
+        
         # return address of the first free cell
         temp_address = self.first_free
         if array_attribute:
