@@ -29,6 +29,7 @@ class DummyFile:
         # Dummy close method.
         pass
 
+# Creating and opening various files needed by the program.
 in_file = create_file_by_mode("input.txt", "r")
 out_file = create_file_by_mode("tokens.txt", "w+")
 lex_file = create_file_by_mode("lexical_errors.txt", "w+")
@@ -37,6 +38,7 @@ parser_errors_file = create_file_by_mode("syntax_errors.txt", "w+")
 parser_tree_file = create_file_by_mode("parse_tree.txt", "w+", encoding='utf-8')
 generated_code_file = create_file_by_mode("output.txt", "w+")
 semantic_errors_file = create_file_by_mode("semantic_errors.txt", "w+")
+
 
 heap = HeapManager()
 symbol_table = SymbolTable(heap)
