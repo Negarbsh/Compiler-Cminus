@@ -32,7 +32,6 @@ This project is a Python 3 implementation of a one-pass compiler for a simplifie
 
 To use the compiler, run `compiler.py` with a C-minus source file as input. The program will process the input and generate an output in the form of an intermediate representation or error messages if any issues are detected in the source code.
 
-
 ## Maintainers
 
 - [Negar Babashah](https://github.com/Negarbsh)
