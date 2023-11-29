@@ -8,9 +8,12 @@ from code_generator import CodeGenerator
 list_needed_files = ["output", "input", "semantic_errors"]
 
 def create_file_by_mode(name, mode, encoding='utf-8'):
+    # Extract the base name of the file without its extension.
     name_pure = name.split(".")[0]
+    # Check if the file is one of the necessary files, and if so, open it in the specified mode.
     if name_pure in list_needed_files:
         return open(name, mode, encoding=encoding)
+    # If the file is not necessary, return an instance of DummyFile.
     return DummyFile()
 
 class DummyFile:
