@@ -1,5 +1,5 @@
 from scanner import Scanner
-from parser import Parser
+from parserr import Parser
 from symbol_table import SymbolTable
 from heap_manager import HeapManager
 from code_generator import CodeGenerator
@@ -38,7 +38,6 @@ parser_errors_file = create_file_by_mode("syntax_errors.txt", "w+")
 parser_tree_file = create_file_by_mode("parse_tree.txt", "w+", encoding='utf-8')
 generated_code_file = create_file_by_mode("output.txt", "w+")
 semantic_errors_file = create_file_by_mode("semantic_errors.txt", "w+")
-
 
 # Initializing the heap manager and symbol table.
 heap = HeapManager()
