@@ -27,11 +27,13 @@ class HeapManager:
         # Store the starting address of the allocated memory.
         temp_address = self.first_free
 
+        # If the variable is an array, append '-arr' to its type name.
         if array_attribute:
             self.last_temp.type_name += "-arr"
 
+        # Allocate memory units based on the size and update the first free address.
         for i in range(size):
-            temp = TempVariable(type_name, self.first_free, False)
+            temp = TempVariable(type_name, self.first_free, array_attribute)
             self.variables[self.first_free] = temp
             self.first_free += self.get_length_by_type(type_name)
             self.last_temp = temp
