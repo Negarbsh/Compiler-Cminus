@@ -1,5 +1,5 @@
 from scanner import Scanner
-from parserr import Parser
+from Parser import Parser
 from symbol_table import SymbolTable
 from heap_manager import HeapManager
 from code_generator import CodeGenerator
