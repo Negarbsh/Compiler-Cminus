@@ -42,10 +42,16 @@ class HeapManager:
 
     @staticmethod
     def get_length_by_type(type_name):
+        """
+        Get the memory size required for a given data type.
+
+        :param type_name: The data type (e.g., 'int', 'void').
+        :return: The size in memory units.
+        """
         if type_name == "int":
-            return 4
+            return 4  # Integers take 4 units of memory.
         elif type_name == "void":
-            return 1
+            return 1  # Void takes 1 unit of memory.
 
     def get_type_by_address(self, address):
         return self.variables[address].type_name
