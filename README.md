@@ -1,4 +1,3 @@
-
 # CMinusCompiler
 
 **Python3 based one-pass compiler for a simplified C-minus**
@@ -45,4 +44,8 @@ The `Code` folder contains several components of the CMinusCompiler:
 - `Scanner.py`: The lexical analyzer that breaks the input source code into tokens as defined in the token table.
 - `semantic_errors.txt`: A log file where semantic errors detected during the compilation are recorded.
 - `syntax_errors.txt`: A log file where syntax errors detected during the compilation are recorded.
-- `table.json`: A JSON representat
+- `table.json`: A JSON representation of the parse table used by the parser to guide the parsing process.
+
+## Maintainer
+
+
