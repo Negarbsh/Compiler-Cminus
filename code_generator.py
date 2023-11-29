@@ -72,13 +72,11 @@ class SemanticAnalyzer:
         self.all_errors.pop()
         self.num_semantic_errors -= 1
 
-
 def get_type_name(tuple_type):
     if tuple_type[1]:
         return "array"
     else:
         return tuple_type[0]
-
 
 class CodeGenerator:
 
