@@ -1,4 +1,4 @@
-# CMinusCompiler
+# Compiler-Cminus
 
 **Python3 based one-pass compiler for a simplified C-minus**
 
