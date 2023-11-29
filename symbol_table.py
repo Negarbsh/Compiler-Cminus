@@ -1,6 +1,5 @@
 from heap_manager import HeapManager
 
-
 class SymbolTable:
 
     def __init__(self, heap_manager) -> None:
