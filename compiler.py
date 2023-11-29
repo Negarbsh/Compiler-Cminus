@@ -53,11 +53,16 @@ scanner = Scanner(
     symbol_table=symbol_table
 )
 
+# Initializing the code generator with the symbol table and heap manager.
 code_generator = CodeGenerator(symbol_table=symbol_table, heap=heap)
 
+# Initializing the parser with necessary files and components like scanner and code generator.
 parser = Parser(errors_file=parser_errors_file, parse_tree_file=parser_tree_file,
                 scanner=scanner, code_gen=code_generator)
+
+# Running the parser.
 parser.run()
+
 
 code_generator.write_pb_to_file(generated_code_file, semantic_errors_file)
 
