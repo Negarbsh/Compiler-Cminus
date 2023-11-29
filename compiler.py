@@ -4,7 +4,7 @@ from symbol_table import SymbolTable
 from heap_manager import HeapManager
 from code_generator import CodeGenerator
 
-# initialize a scanner and call get_next_token repeatedly
+# List of file names that are required for the program execution.
 list_needed_files = ["output", "input", "semantic_errors"]
 
 def create_file_by_mode(name, mode, encoding='utf-8'):
