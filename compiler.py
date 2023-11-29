@@ -70,5 +70,3 @@ sym_file.close()
 parser_errors_file.close()
 semantic_errors_file.close()
 generated_code_file.close()
-
-
