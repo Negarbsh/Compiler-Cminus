@@ -17,13 +17,16 @@ def create_file_by_mode(name, mode, encoding='utf-8'):
     return DummyFile()
 
 class DummyFile:
+    # A dummy file class to handle unnecessary file operations.
     def __init__(self):
         pass
 
     def write(self, text):
+        # Dummy write method.
         pass
 
     def close(self):
+        # Dummy close method.
         pass
 
 in_file = create_file_by_mode("input.txt", "r")
