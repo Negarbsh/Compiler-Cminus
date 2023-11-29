@@ -32,7 +32,6 @@ class HeapManager:
     def get_type_by_address(self, address):
         return self.variables[address].type_name
 
-
 class TempVariable:
     def __init__(self, type_name, address, array_attribute):
         self.type_name = type_name
